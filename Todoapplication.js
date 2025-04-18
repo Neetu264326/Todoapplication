@@ -1,0 +1,41 @@
+const jobs = [
+  { title: "Frontend Developer Intern", company: "TechNova", location: "Remote", salary: "₹6,000 - ₹8,000", type: "Internship", schedule: "Flexible Hours", desc: "Work on real-world UI/UX challenges with React and Tailwind CSS." },
+  { title: "Backend Developer", company: "CodeCrush", location: "Bangalore", salary: "₹25,000 - ₹35,000", type: "Full-time", schedule: "Mon–Fri", desc: "Join our Node.js team building scalable APIs." },
+  { title: "UI/UX Designer", company: "PixelCraft", location: "Mumbai", salary: "₹20,000", type: "Contract", schedule: "Remote Possible", desc: "Design modern mobile-first interfaces." },
+  { title: "Software Tester Intern", company: "BugSquashers", location: "Remote", salary: "₹5,000", type: "Internship", schedule: "WFH", desc: "Assist QA team with Selenium and manual testing." },
+  { title: "Mobile App Developer", company: "AppFlow", location: "Pune", salary: "₹30,000", type: "Full-time", schedule: "Flexible", desc: "Build cross-platform mobile apps." },
+  { title: "Data Analyst Intern", company: "DataWiz", location: "Remote", salary: "₹7,000", type: "Internship", schedule: "Mon–Fri", desc: "Analyze real-time data using Python." },
+  { title: "Digital Marketing Intern", company: "GrowthByte", location: "Delhi", salary: "₹5,000", type: "Internship", schedule: "Remote", desc: "Assist with SEO and content strategy." },
+  { title: "Full Stack Developer", company: "StackSavvy", location: "Remote", salary: "₹40,000", type: "Full-time", schedule: "Mon–Fri", desc: "Develop web apps using MERN stack." },
+  { title: "AI Research Intern", company: "BrainCore", location: "Bangalore", salary: "₹10,000", type: "Internship", schedule: "Part-time", desc: "Work on ML models and data sets." },
+  { title: "Cloud DevOps Engineer", company: "CloudBlitz", location: "Chennai", salary: "₹50,000", type: "Full-time", schedule: "Hybrid", desc: "Manage AWS infrastructure and CI/CD." },
+  { title: "Game Developer Intern", company: "FunFi Games", location: "Remote", salary: "₹4,000", type: "Internship", schedule: "Flexible", desc: "Learn Unity and build interactive games." },
+  { title: "Product Designer", company: "Innovent", location: "Hyderabad", salary: "₹35,000", type: "Full-time", schedule: "Remote", desc: "Design product experiences and prototypes." },
+  { title: "Cybersecurity Intern", company: "SecuRite", location: "Remote", salary: "₹6,000", type: "Internship", schedule: "Part-time", desc: "Help resolve security vulnerabilities." },
+  { title: "Python Developer", company: "CodeLeaf", location: "Noida", salary: "₹30,000", type: "Full-time", schedule: "On-site", desc: "Build REST APIs with Django." },
+  { title: "Blockchain Developer", company: "ChainSpark", location: "Remote", salary: "₹45,000", type: "Contract", schedule: "Flexible", desc: "Build smart contracts with Solidity." },
+  { title: "Business Analyst Intern", company: "InsightEdge", location: "Remote", salary: "₹5,000", type: "Internship", schedule: "Mon–Fri", desc: "Assist with business research and analysis." },
+  { title: "DevOps Intern", company: "SysOpsX", location: "Remote", salary: "₹6,000", type: "Internship", schedule: "WFH", desc: "Help maintain cloud dev pipelines." },
+  { title: "WordPress Developer", company: "WP Studio", location: "Kolkata", salary: "₹20,000", type: "Full-time", schedule: "On-site", desc: "Create responsive WP websites." },
+  { title: "Content Writer Intern", company: "WriteVerse", location: "Remote", salary: "₹3,000", type: "Internship", schedule: "Part-time", desc: "Write SEO-friendly blogs and content." },
+  { title: "Customer Support Exec", company: "HelpDeskPro", location: "Mumbai", salary: "₹22,000", type: "Full-time", schedule: "Mon–Sat", desc: "Resolve user issues via email/chat." },
+];
+
+const jobList = document.getElementById("job-list");
+
+jobs.forEach(job => {
+  const jobCard = document.createElement("article");
+  jobCard.className = "job-card";
+  jobCard.innerHTML = `
+    <h2 class="job-card__title">${job.title}</h2>
+    <p class="job-card__company"><strong>${job.company}</strong> – ${job.location}</p>
+    <p class="job-card__salary">${job.salary}</p>
+    <div class="job-card__tags">
+      <span class="badge">${job.type}</span>
+      <span class="badge">${job.schedule}</span>
+    </div>
+    <p class="job-card__desc">${job.desc}</p>
+    <button class="apply-btn">Apply Now</button>
+  `;
+  jobList.appendChild(jobCard);
+});
